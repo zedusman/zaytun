@@ -1,0 +1,433 @@
+/* common style starts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap')
+
+btn,body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --themeGreen: #488689;
+    --gray: #efefef;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.fullContainer{
+    width: 100%;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+}
+.sectionTitle{
+    width: 300px;
+    border-bottom: 3px solid var(--themeGreen);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+/* .sectionTitle::after{
+    display: inline-block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: var(--themeGreen);
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+    border-radius: 11%;
+    transform: rotate(45px), translate(50%, 50%);
+    border: 3px solid #fff; 
+
+
+} */
+
+section{
+    padding: 100px 0;
+    position: relative;
+}
+
+/*  common style ends*/
+
+/* home start */
+p{
+    font-size: 16px;
+    line-height: 26px;
+}
+header{
+    width: 100%;
+    background: #284243;
+    z-index: 2;
+    position: fixed;
+
+}
+.logo img{
+    width: 150px;
+}
+
+header.container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header.container.logo{
+    padding: 20px 0;
+    height: 75px;
+    display: block;
+    justify-self: start;
+}
+header.container.logo img{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    align-items: flex-start
+}
+header nav ul{
+    list-style-type:none ;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: -100px;
+    margin-bottom: 10px;
+}
+header nav ul li{
+    display: flex;
+    margin: 0.15rem;
+
+}
+header nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+
+}
+
+header nav ul li a:hover{
+    background-color: var(--themeGreen);
+}
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(trees.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner h1{
+    margin-top: 230px;
+    font-size: 3.5rem;
+    display: inline-block;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    width: 50%;
+    line-height: 4.2rem;
+    font-weight: 100;
+
+}
+
+.banner h1 span{
+    background-color: var(--themeGreen);
+    display: inline-block;
+    line-height: 3.5rem;
+    padding: 0 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.banner p{
+    color: #fff;
+    width: 50%;
+    text-shadow: 0 0 2px #000;
+    margin-top: 10px;
+    line-height: 35px;
+}
+
+.banner button{
+    background-color: var(--themeGreen);
+    border: 0;
+    outline: none;
+    color: #fff;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+/* home end */
+
+/* aboutSection starts*/
+
+#aboutSection .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutSection .cards >div {
+    width: 350px;
+    background-color: var(--gray);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 15px;
+    height: 215px;
+    border: 1px solid #ccc; 
+    transition: 0.5s;
+}
+
+#aboutSection .cards > div:hover{
+    width: 400px;
+    margin-top: -20px;
+    border-color: var(--themeGreen);
+    padding: 55px;
+    height: auto;
+}
+
+#aboutSection .cards >div .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutSection .cards > div p {
+    font-size: 14px;
+    margin-top: 15px;   
+}
+
+#aboutSection .cards >div button{
+    border: 1px solid var(--themeGreen);
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#aboutSection .cards >div  button:hover{
+    background-color: var(--themeGreen);
+    color: #fff;
+    border: 1px solid var(--themeGreen);
+    }
+
+/* aboutSection ends */
+
+/* program section starts here */
+
+.program{
+    background-color: #e2e2e2;
+}
+
+.program .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 50px;
+}
+.program .boxContainer .box{
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px ;
+    box-shadow: 0 0 3px #c5c5c5;
+    position: relative;
+    margin-bottom: 15px ;
+}
+.program .boxContainer .box .cardImage{
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+
+}
+.program .boxContainer .box .cardImage::after{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.program .boxContainer .box:nth-child(1) .cardImage,
+.program .boxContainer .box:nth-child(1) .cardImage::after{
+    background-image: url(water\ for\ all.jpeg) ;
+}
+.program .boxContainer .box:nth-child(2) .cardImage,
+.program .boxContainer .box:nth-child(2) .cardImage::after{
+    background-image: url(borehole.jpeg) ;
+}
+.program .boxContainer .box:nth-child(3) .cardImage,
+.program .boxContainer .box:nth-child(3) .cardImage::after{
+    background-image: url(water\ for\ all\ 2.jpeg) ;
+}
+.program .boxContainer .box:nth-child(4) .cardImage,
+.program .boxContainer .box:nth-child(4) .cardImage::after{
+    background-image: url(hijabs.jpeg) ;
+}
+.program .boxContainer .box:hover .cardImage::after{
+    top: 100%;
+}
+.program .boxContainer .box .programTitle{
+    font-size: 16px;
+    margin-top: 15px ;
+    font-weight: 600;
+    color: #444;
+}
+.program .boxContainer .box .donationCount{
+    font-size: 16px;
+    font: weight 600px;
+    color: #444;
+    margin-top: 10px;
+}
+.program .boxContainer .box .donationCount span{
+    color: var(--themeGreen); 
+}
+.program .boxContainer .box button{
+    position: absolute;
+    background-color: var(--themeGreen);
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%);
+    bottom: -15px;
+    border: 0;
+    border-radius: 60px;
+    padding: 5px 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* program section ends here */
+
+
+/* education section starts here  */  
+
+.education{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.education .videoPlayer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.education .sectionTitle{
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+}
+.education .educationContainer{
+    position: absolute;
+    top: 35vh;
+    background-color: #00000096;
+    color: #fff;
+    width: 600px;
+    text-shadow: 0 0 3px #000;
+    padding: 30px
+}
+.education .educationContainer h3{
+    font-size: 35px;
+    font-weight: 300;
+
+}
+.education .educationContainer p{
+    font-size: 15px;
+    line-height: 20px;
+    margin: 10px 0 30px;
+}
+
+.education .educationContainer button{
+    background-color: var(--themeGreen);
+    border: 0;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* education section ends here  */
+
+/* gallery section starts here  */
+
+.gallery .galleryContainer{
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.gallery .galleryContainer .items{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.gallery .galleryContainer img{
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+.gallery .galleryContainer .title{
+    position: absolute;
+    background-color: var(--gray);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .item:hover .title{
+    opacity: 1;
+}
+.gallery .galleryContainer .item:hover img{
+    transform: scale(1.2)
+}
+
+
+/* gallery section ends here  */
+
+/* join us section starts here */
+
+
+
+
+/* join us section ends here */
