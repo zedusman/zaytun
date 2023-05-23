@@ -473,7 +473,7 @@ footer{
 
 footer .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
     grid-gap: 50px;
 }
 footer .title{
@@ -520,3 +520,169 @@ footer .newsLetterContainer input{
 
 
 /* footer ends */
+
+/* responsive code starts here */
+@media screen and (max-width:1140px) {
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .education .videoPlayer{
+        width: 1280px;
+    }
+}
+@media  screen and (max-width:1080px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+    #aboutSection .cards{
+        justify-content: space-around ;
+        height: auto;
+
+    }
+    #aboutSection .cards > div {
+        margin: 10px 0;
+    }
+
+}
+
+@media screen and (max-width:1024px){
+    .banner{
+        background-position-x:45%;
+
+    }
+    .banner h1{
+        font-size: 2.5rem;
+    }
+    .program .boxContainer{
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+}
+
+@media screen and (max-width:768px){
+    header nav{
+        position:relative;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+    }
+    header nav::after{
+        top: 17px;
+    }
+
+    header nav::before{
+        top: 7px;
+       
+    }
+
+    header nav::before,
+    header nav::after{
+        content:"";
+        height: 2px;
+        width: 20px;
+        background-color: #fff;
+        position: absolute;
+        display: block;
+        left: 5px;
+    }
+    header nav ul{
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5px;
+    }
+    header nav:hover ul{
+        right: 0;
+    }
+    header nav ul li{
+        display: block;
+    }
+    header nav ul li a{
+        width: 300px ;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .banner{
+        background-position-x: 65%;
+    }
+    .banner p{
+        font-size: 14px;
+    }
+    .banner p, .banner h1{
+        width: 70%;
+    }
+
+    #aboutSection .cards> div :hover{
+        width: 350px;
+    }
+    .education .educationContainer{
+        width: 96% ;
+    }
+
+    .education .educationContainer h3{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .education .educationContainer p{
+     margin: 10px 0 20px;   
+    }
+    .gallery .galleryContainer{
+        column-count: 2;
+    }
+
+
+}
+
+@media  screen and (max-width:425px) {
+    .banner h1{
+        margin-top: 150px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .banner button{
+        margin-bottom: 10px;
+
+    }
+    #aboutSection p {
+        text-align: justify;
+    }
+    #aboutSection .cards > div:hover{
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+    .program .boxContainer{
+        grid-template-columns: 1fr;
+    }
+
+    .education .videoPlayer{
+        width: 1400px;
+    }
+
+    .education .educationContainer{
+        width: 93%;
+    }
+    .gallery .galleryContainer{
+        column-count: 1;
+    }
+
+    footer .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media  screen and (max-width:320px) {
+    .education .educationContainer h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .banner h1{
+        margin-top: 100px;
+    }
+    
+}
+/* responsive code ends here */
